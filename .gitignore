@@ -1,0 +1,7 @@
+.idea
+public/
+build/
+_gen/
+**tmp/
+slides.pdf
+*.hprof
