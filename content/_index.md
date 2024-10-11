@@ -51,9 +51,6 @@ The **training of the model** takes into account the fairness constraints.
 The model is treated as a black-box and only the **predictions are adjusted** to ensure fairness.
 
 {{% /fragment %}}
-{{% /row %}}
-
-{{% /fragment %}}
 
 {{% /row %}}
 
