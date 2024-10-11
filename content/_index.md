@@ -1,8 +1,8 @@
  
 +++
 
-title = "Second Year PhD Presentation"
-description = "Symbolic Knowledge Injection & Extraction for Autonomous Learning"
+title = "Enforcing Fairness via Constraint Injection with FaUCI"
+description = "Enforcing Fairness via Constraint Injection with FaUCI"
 outputs = ["Reveal"]
 aliases = [
     "/guide/"
@@ -12,10 +12,10 @@ aliases = [
 
 {{% slide preload=true background-iframe="boids.html" transition="zoom" %}}
 
-# Symbolic Knowledge Injection & Extraction for Autonomous Learning
-**Second Year PhD report**
+# Enforcing Fairness via Constraint Injection with FaUCI
+**2nd Aequitas Workshop on Fairness and Bias in AI**
 
-🎤 *Matteo Magnini*, supervisor **Andrea Omicini**
+🎤 *Matteo Magnini*, **Giovanni Ciatto**, **Roberta Calegari**, **Andrea Omicini**
 
 📧 [matteo.magnini@unibo.it](mailto:gianluca.aguzzi@unibo.it)
 
