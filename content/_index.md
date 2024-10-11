@@ -23,42 +23,35 @@ aliases = [
 
 {{% slide auto-animate=true %}}
 ## Context {.highlight}
-### Fundamentals {.accent}
+### Enforcing Fairness in ML models {.accent}
 {{% row %}}
 {{% fragment class="col" style="flex: 0 0 33%;"%}} 
-#### Symbolic Knowledge
-<br/>
-$$
-\forall x \, \text{Man}(x) \implies \text{Mortal}(x)
-$$
+#### Pre-processing
 
-$$
-\text{Man}(\text{Socrates})
-$$
+{{< image height="33" src="/data-preprocessing.png" >}}
 
-<i class="fa fa-arrow-down" aria-hidden="true"></i>
-
-$$
-\text{Mortal}(\text{Socrates})
-$$
-
-All those knowledge representations where there are symbols carrying **meaning**: logic rules, traffic signs, sentences in natural language, etc.
+Methods that operate at **dataset level** to remove biases for sensitive groups.
 
 {{% /fragment %}}
 
 {{% fragment class="col" %}} 
-#### Sub-symbolic models
-{{< image height="33" src="/nn-brain-shape.png" >}}
+#### In-processing
 
-Models that are based on **numerical values** and do not have a symbolic meaning like neural networks.
+{{< image height="33" src="/in-processing.png" >}}
+
+The **training of the model** takes into account the fairness constraints.
 
 {{% /fragment %}}
 
 {{% fragment class="col" %}} 
-#### Intelligent Systems
-{{< image height="33" src="/intelligent-hybrid-systems.svg" >}}
+#### Post-processing
 
-Intelligent systems incorporate knowledge, possibly **both symbolic and sub-symbolic**, to make decisions.
+{{< image height="33" src="/post-processing.png" >}}
+
+The model is treated as a black-box and only the **predictions are adjusted** to ensure fairness.
+
+{{% /fragment %}}
+{{% /row %}}
 
 {{% /fragment %}}
 
