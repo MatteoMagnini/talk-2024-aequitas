@@ -12,7 +12,9 @@
         background-size: 150px; /* Adjust the size of the logo */
         background-position: top center; /* Centered horizontally and aligned to the top */
         background-repeat: no-repeat; /* Ensure the logo doesn't repeat */
-        margin-top: 50px;
+        padding-top: 50px; /* Add space between the logo and the top without overflow */
+        box-sizing: border-box; /* Ensures padding is within the box dimensions */
+        overflow: hidden; /* Prevents scrollbars from appearing */
       }
       body {
         margin: 0;
