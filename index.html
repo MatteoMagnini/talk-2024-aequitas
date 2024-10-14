@@ -29,12 +29,16 @@
 </section>
 <section data-noprocess="" data-shortcode-slide="" data-auto-animate="true">
 <h2 class="highlight" id="context">Context</h2>
+<h3 class="accent" id="what-do-we-mean-by-fairness">What do we mean by fairness?</h3>
+</section>
+<section data-noprocess="" data-shortcode-slide="" data-auto-animate="true">
+<h2 class="highlight" id="context-1">Context</h2>
 <h3 class="accent" id="enforcing-fairness-in-ml-models">Enforcing Fairness in ML models</h3>
 <div class="container">
 <span class="fragment col">
   <h4 id="pre-processing">Pre-processing</h4>
 <figure class="">
-    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/data-preprocessing-vert.png" style="height:360px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
+    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/data-preprocessing-vert.png" style="height:405px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
     <figcaption>  </figcaption>
   </figure>
 <p>Methods that operate at <strong>dataset level</strong> to remove biases for sensitive groups.</p>
@@ -42,7 +46,7 @@
 <span class="fragment col">
   <h4 id="in-processing">In-processing</h4>
 <figure class="">
-    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/in-processing-vert.png" style="height:360px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
+    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/in-processing-vert.png" style="height:405px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
     <figcaption>  </figcaption>
   </figure>
 <p>The <strong>training of the model</strong> takes into account the fairness constraints.</p>
@@ -50,7 +54,7 @@
 <span class="fragment col">
   <h4 id="post-processing">Post-processing</h4>
 <figure class="">
-    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/post-processing-vert.png" style="height:360px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
+    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/post-processing-vert.png" style="height:405px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
     <figcaption>  </figcaption>
   </figure>
 <p>The model is treated as a black-box and only the <strong>predictions are adjusted</strong> to ensure fairness.</p>
@@ -58,248 +62,30 @@
 </div>
 </section>
 <section data-noprocess="" data-shortcode-slide="" data-auto-animate="true">
-<h2 class="highlight" id="symbolic-knowledge-injection-ski">Symbolic Knowledge Injection (SKI)</h2>
-<div class="container">
-<span class="fragment col">
-  <h4 class="accent" id="constraining">Constraining</h4>
-<figure class="">
-    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/workflow-constraining.png" style="height:225px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
-    <figcaption>  </figcaption>
-  </figure>
-<p>The training process is <em>guided</em> by the loss function that incorporates the knowledge <strong>penalising</strong> the model when it makes predictions that <strong>violates</strong> it.</p>
-</span>
-<span class="fragment col">
-  <h4 class="accent" id="embedding">Embedding</h4>
-<figure class="">
-    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/workflow-embedding.png" style="height:225px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
-    <figcaption>  </figcaption>
-  </figure>
-<p>The symbolic knowledge is <em>embedded</em> into a sub-symbolic representation.
-The embeddings are provided as <strong>additional input</strong> to the neural network.</p>
-</span>
-</div>
-<div class="container">
-<span class="fragment col">
-  <figure class="">
-    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/workflow-structuring.png" style="height:225px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
-    <figcaption>  </figcaption>
-  </figure>
-</span>
-<span class="fragment col">
-  <h4 class="accent" id="structuring">Structuring</h4>
-<p>The network <em>architecture is modified</em> to include symbolic knowledge.
-Some neurons and connection are designed to <strong>mimic</strong> the symbolic knowledge.</p>
-</span>
-</div>
+<h2 class="highlight" id="context-2">Context</h2>
+<h3 class="accent" id="the-in-processing-techniques">The in-processing techniques</h3>
 </section>
 <section data-noprocess="" data-shortcode-slide="" data-auto-animate="true">
-<h2 class="highlight" id="symbolic-knowledge-extraction-ske">Symbolic Knowledge Extraction (SKE)</h2>
-<div class="container">
-<span class="fragment col">
-  <h4 class="accent" id="data">Data</h4>
-<figure class="">
-    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/iris-flower.png" style="height:270px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
-    <figcaption>  </figcaption>
-  </figure>
-<p>The well known Iris dataset is used to train a neural network.</p>
-</span>
-<span class="fragment col">
-  <h4 class="accent" id="sub-symbolic-model">Sub-symbolic model</h4>
-<figure class="">
-    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/nn-iris.png" style="height:270px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
-    <figcaption>  </figcaption>
-  </figure>
-<p>A neural network is trained to classify the Iris dataset.
-A human <strong>can’t understand</strong> how the network makes decisions by inspecting it.</p>
-</span>
-<span class="fragment col">
-  <h4 class="accent" id="symbolic-knowledge">Symbolic knowledge</h4>
-<figure class="">
-    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/decision-tree-iris.png" style="height:270px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
-    <figcaption>  </figcaption>
-  </figure>
-<p>A decision tree is generated from the neural network to extract symbolic knowledge.
-The decision tree is <strong>interpretable</strong> by humans.</p>
-</span>
-</div>
+<h2 class="highlight" id="open-challenges">Open challenges</h2>
+<h3 class="accent" id="types-of-protected-attributes">Types of protected attributes</h3>
 </section>
 <section data-noprocess="" data-shortcode-slide="" data-auto-animate="true">
-<h2 class="highlight" id="current-literature-limitations">Current literature limitations</h2>
-<div class="container">
-<span class="fragment col">
-  <h4 class="accent" id="technology">Technology</h4>
-<ul>
-<li>The vast majority of the literature articles <em>lack the implementation</em> of the proposed methods.</li>
-<li>The ones that do, only have the code to run the experiments (if still available and maintained).</li>
-<li>Only a handful of works provide a library to use the proposed method.</li>
-</ul>
-</span>
-</div>
-<div class="container">
-<span class="fragment col">
-  <h4 class="accent" id="methodology">Methodology</h4>
-<ul>
-<li>SKI (resp. SKE) methods primarily focus in achieving <em>better performance</em> for the educated (resp. surrogate) model.</li>
-<li>There is a lack of works that explore qualitative aspects of the model, a.k.a. <em>Quality of Service (QoS)</em>.</li>
-<li>SKI can be used for other purposes rather than improving the model performance, like ensuring <em>fairness</em> quality.</li>
-</ul>
-</span>
-</div>
-<div class="container">
-<span class="fragment col">
-  <h4 class="accent" id="vision">Vision</h4>
-<ul>
-<li>SKI and SKE methods are virtually used only to solve <em>toy-problems</em> to validate the approach.</li>
-<li>The potential of these methods in <em>real-world applications</em> is not explored.</li>
-<li>Also, the <em>conjunct</em> use of SKI and SKE is not explored.</li>
-</ul>
-</span>
-</div>
+<h2 class="highlight" id="open-challenges-1">Open challenges</h2>
+<h3 class="accent" id="fairness-metrics">Fairness metrics</h3>
 </section>
 <section data-noprocess="" data-shortcode-slide="" data-auto-animate="true">
-<h2 class="highlight" id="proposed-approach">Proposed approach</h2>
-<div class="container">
-<span class="fragment col">
-  <h4 class="accent" id="roadmap">Roadmap</h4>
-<ul>
-<li>Study the current literature to understand the state-of-the-art in SKI and SKE.</li>
-<li>Design tools to support the implementations of new and already existing SKI and SKE methods.</li>
-<li>Formalise QoS metrics for SKI and SKE methods.</li>
-</ul>
-</span>
-</div>
-<div class="container">
-<span class="fragment col">
-  <h4 class="accent" id="intelligent-systems-branch">Intelligent Systems branch</h4>
-<ul>
-<li>Design and implement intelligent systems that make use of SKI and SKE methods for real-world applications.</li>
-</ul>
-</span>
-</div>
-<div class="container">
-<span class="fragment col">
-  <h4 class="accent" id="fairness-branch">Fairness branch</h4>
-<ul>
-<li>Explore the use of SKI methods to ensure fairness in AI systems.</li>
-<li>Design a specific language to express fairness constraints.</li>
-</ul>
-</span>
-</div>
+<h2 class="highlight" id="fauci">FaUCI</h2>
+<h3 class="accent" id="fairness-under-constraints-injection">Fairness under Constraints Injection</h3>
 </section>
 <section data-noprocess="" data-shortcode-slide="" data-auto-animate="true">
-<h2 class="highlight" id="contributions">Contributions</h2>
-<div class="container">
-<span class="fragment col">
-  <h4 class="accent" id="systematic-literature-review">Systematic Literature Review</h4>
-<ul>
-<li>“G. Ciatto et al., <em>Symbolic Knowledge Extraction and Injection with Subsymbolic Predictors: A Systematic Literature Review</em>, in journal <span class="ok">ACM Computing Surveys 2024</span>”</li>
-</ul>
-</span>
-<span class="fragment col">
-  <h4 class="accent" id="technologies">Technologies</h4>
-<ul>
-<li>“M. Magnini et al., <em>On the Design of PSyKI: A Platform for Symbolic Knowledge Injection into Sub-symbolic Predictors</em>, in workshop <span class="ok">EXTRAAMAS 2022</span>”, publicly available at <a href="https://github.com/psykei/psyki-python">github.com/psykei/psyki-python</a></li>
-<li>PSyKE, implementation only, publicly available at <a href="https://github.com/psykei/psyke-python">github.com/psykei/psyki-python</a></li>
-</ul>
-</span>
-</div>
-<div class="container">
-<span class="fragment col">
-  <h4 class="accent" id="ski-methods">SKI methods</h4>
-<ul>
-<li>“M. Magnini et al., <em>KINS: Knowledge Injection via Network Structuring</em>, in workshop <span class="ok">CILC 2022</span>”</li>
-<li>“M. Magnini et al., <em>Knowledge injection of Datalog rules via Neural Network Structuring with KINS</em>, in journal <span class="ok">Logic and Computation 2023</span>”</li>
-<li>“M. Magnini et al., <em>A view to a KILL: knowledge injection via lambda layer</em>, in workshop <span class="ok">WOA 2022</span>”</li>
-</ul>
-</span>
-<span class="fragment col">
-  <h4 class="accent" id="quality-of-service">Quality of Service</h4>
-<ul>
-<li>“A. Agiollo et al., <em>Symbolic knowledge injection meets intelligent agents: QoS metrics and experiments</em>, in journal <span class="ok">Autonomous Agents and Multi-Agent Systems 2023</span>”</li>
-<li>“A. Rafanelli et al., <em>An Empirical Study on the Robustness of Knowledge Injection Techniques Against Data Degradation</em>, in workshop <span class="ok">WOA 2024</span>”</li>
-</ul>
-</span>
-</div>
+<h2 class="highlight" id="fauci-1">FaUCI</h2>
+<h3 class="accent" id="results">Results</h3>
 </section><section>
-<h2 class="highlight" id="contributions-1">Contributions</h2>
-<div class="container">
-<span class="fragment col">
-  <h4 class="accent" id="intelligent-systems">Intelligent systems</h4>
-<ul>
-<li>“M. Magnini et al., <em>Symbolic knowledge extraction for explainable nutritional recommenders</em>, in journal <span class="ok">Computer Methods and Programs in Biomedicine 2023</span>”</li>
-<li>“G. Ciatto et al., <em>A General-Purpose Protocol for Multi-agent Based Explanations</em>, in workshop <span class="ok">EXTRAAMAS 2023</span>”</li>
-</ul>
-</span>
-</div>
-<div class="container">
-<span class="fragment col">
-  <h4 class="accent" id="ski-and-ske-conjunct">SKI and SKE conjunct</h4>
-<ul>
-<li>“M. Magnini et al., <em>Bridging Symbolic and Sub-Symbolic AI: Towards Cooperative Transfer Learning in Multi-Agent Systems</em>” in workshop <span class="ok">AIxIA DP 2022</span></li>
-</ul>
-</span>
-</div>
-<div class="container">
-<span class="fragment col">
-  <h4 class="accent" id="fairness">Fairness</h4>
-<ul>
-<li>“M. Magnini et al., <em>Enforcing Fairness via Constraint Injection with FaUCI</em>, in workshop <span class="ok">AEQUITAS 2024</span>”</li>
-</ul>
-</span>
-</div>
+<h2 class="highlight" id="future-directions">Future directions</h2>
 </section>
 <section data-noprocess="" data-shortcode-slide="" data-auto-animate="true">
-<h2 class="highlight" id="and-then-llms-happened">And then LLMs happened</h2>
-<div class="container">
-<span class="fragment col">
-  <h4 class="accent" id="large-language-models">Large Language Models</h4>
-<p>LLMs are huge neural networks (up to hundreds of billions of parameters) that are trained on a large corpus of text data.
-Generally, LLMs work by <strong>predicting the most plausible token</strong> given the previous tokens in a sentence.
-In the last years, the success of LLM has been world-wide recognised, and they are successfully used in applications of different domains.</p>
-</span>
-</div>
-<div class="container">
-<span class="fragment col">
-  <h4 class="accent" id="ske-with-llm">SKE with LLM</h4>
-<p>LLMs can be exploited to <strong>extract</strong> symbolic knowledge about a particular domain of interest.
-The process can be done by iteratively querying the LLM with a set of questions following a specific protocol.
-From the answers, a symbolic representation can be generated.</p>
-</span>
-</div>
-<div class="container">
-<span class="fragment col">
-  <h4 class="accent" id="ski-with-llm">SKI with LLM</h4>
-<p>Conversely, LLMs can operate by <strong>exploiting external (symbolic) knowledge</strong> like textual documents, ontologies, databases, etc.
-This knowledge can be provided with two different strategies:</p>
-<ul>
-<li><em>Fine-tuning</em>: similar to the traditional fine-tuning process, re-training the LLM with the new data.</li>
-<li><em>Retrieval-augmented generation (RAG)</em>: retrieval mechanism to get relevant information from the external knowledge and then generation phase.</li>
-</ul>
-</span>
-</div>
+<h2 class="highlight" id="thank-you-for-your-attention">Thank you for your attention!</h2>
 </section>
-<section data-noprocess="" data-shortcode-slide="" data-auto-animate="true">
-<h2 class="highlight" id="contributions-2">Contributions</h2>
-<div class="container">
-<span class="fragment col">
-  <h4 class="accent" id="applications-ski-and-ske-with-llms">Applications, SKI and SKE with LLMs</h4>
-<ul>
-<li>“M. Magnini et al., <em>Actively Learning Ontologies from LLMs: First Results (Extended Abstract)</em>, in workshop <span class="ok">DL 2024</span>”</li>
-<li>“S. Montagna et al., <em>LLM-based Solutions for Healthcare Chatbots: a Comparative Analysis</em>, in workshop <span class="ok">PERCOM 2024</span>”</li>
-</ul>
-</span>
-</div>
-<h2 class="highlight" id="challenges-and-future-work">Challenges and Future work</h2>
-<div class="container">
-<span class="fragment col">
-  <ul>
-<li><em>Reliability</em> of SKI/SKE systems and LLMs. E.g., extracted/injected knowledge is sound? Are there hallucinations? etc.</li>
-<li><em>Fairness</em>, are there bias in the LLMs? If positive, how to mitigate it?</li>
-<li><em>Closing the loop</em> between SKI and SKE, how to use the extracted knowledge to improve the injected one continuously?</li>
-<li><em>Real-world applications</em>, explore new tasks where SKI/SKE and LLMs (possibly with multiple roles) can be used.</li>
-</ul>
-</span>
-</div></section>
 
   
 
