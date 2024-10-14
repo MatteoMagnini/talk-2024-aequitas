@@ -21,14 +21,14 @@ aliases = [
 
 ---
 
-{{% slide auto-animate=true %}}
+{{% slide auto-animate=true preload=true background-iframe="logo-right.html" transition="zoom" %}}
 ## Context {.highlight}
 ### What do we mean by fairness? {.accent}
 
 
 ---
 
-{{% slide auto-animate=true %}}
+{{% slide auto-animate=true preload=true background-iframe="logo-right.html" transition="zoom" %}}
 ## Context {.highlight}
 ### Enforcing Fairness in ML models {.accent}
 {{% row %}}
@@ -63,31 +63,31 @@ The model is treated as a black-box and only the **predictions are adjusted** to
 
 ---
 
-{{% slide auto-animate=true %}}
+{{% slide auto-animate=true preload=true background-iframe="logo-right.html" transition="zoom" %}}
 ## Context {.highlight}
 ### The in-processing techniques {.accent}
 
 ---
     
-{{% slide auto-animate=true %}}
+{{% slide auto-animate=true preload=true background-iframe="logo-right.html" transition="zoom" %}}
 ## Open challenges {.highlight}
 ### Types of protected attributes {.accent}
 
 ---
 
-{{% slide auto-animate=true %}}
+{{% slide auto-animate=true preload=true background-iframe="logo-right.html" transition="zoom" %}}
 ## Open challenges {.highlight}
 ### Fairness metrics {.accent}
 
 ---
 
-{{% slide auto-animate=true %}}
+{{% slide auto-animate=true preload=true background-iframe="logo-right.html" transition="zoom" %}}
 ## FaUCI {.highlight}
 ### Fairness under Constraints Injection {.accent}
 
 ---
 
-{{% slide auto-animate=true %}}
+{{% slide auto-animate=true preload=true background-iframe="logo-right.html" transition="zoom" %}}
 ## FaUCI {.highlight}
 ### Results {.accent}
 
@@ -98,5 +98,5 @@ The model is treated as a black-box and only the **predictions are adjusted** to
 
 ---
 
-{{% slide auto-animate=true %}}
+{{% slide auto-animate=true preload=true background-iframe="logo-right.html" transition="zoom" %}}
 ## Thank you for your attention! {.highlight}
