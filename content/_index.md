@@ -28,7 +28,7 @@ aliases = [
 {{% fragment class="col" style="flex: 0 0 33%;"%}} 
 #### Pre-processing
 
-{{< image height="33" src="/data-preprocessing.png" >}}
+{{< image height="40" src="/data-preprocessing-vert.png" >}}
 
 Methods that operate at **dataset level** to remove biases for sensitive groups.
 
@@ -37,7 +37,7 @@ Methods that operate at **dataset level** to remove biases for sensitive groups.
 {{% fragment class="col" %}} 
 #### In-processing
 
-{{< image height="33" src="/in-processing.png" >}}
+{{< image height="40" src="/in-processing-vert.png" >}}
 
 The **training of the model** takes into account the fairness constraints.
 
@@ -46,7 +46,7 @@ The **training of the model** takes into account the fairness constraints.
 {{% fragment class="col" %}} 
 #### Post-processing
 
-{{< image height="33" src="/post-processing.png" >}}
+{{< image height="40" src="/post-processing.png" >}}
 
 The model is treated as a black-box and only the **predictions are adjusted** to ensure fairness.
 
