@@ -46,7 +46,7 @@ The **training of the model** takes into account the fairness constraints.
 {{% fragment class="col" %}} 
 #### Post-processing
 
-{{< image height="40" src="/post-processing.png" >}}
+{{< image height="40" src="/post-processing-vert.png" >}}
 
 The model is treated as a black-box and only the **predictions are adjusted** to ensure fairness.
 
