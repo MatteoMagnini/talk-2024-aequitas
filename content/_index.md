@@ -10,7 +10,7 @@ aliases = [
 
 +++
 
-{{% slide preload=true background-iframe="boids.html" transition="zoom" %}}
+{{% slide preload=true background-iframe="logo_unibo.svg" transition="zoom" %}}
 
 # Enforcing Fairness via Constraint Injection with FaUCI
 **2nd Aequitas Workshop on Fairness and Bias in AI**
