@@ -30,20 +30,38 @@ Fairness has different meanings to us depending on our *personal background*.
 {{% row %}}
 {{% fragment class="col" %}}
 
-{{< image height="15" src="/woman-judge-light-skin-tone-svgrepo-com.svg" >}}
-{{< image height="15" src="/balance-law-svgrepo-com_v2.svg" >}}
+{{% row %}}
+{{% fragment class="col" %}}
+{{< image height="20" src="/woman-judge-light-skin-tone-svgrepo-com.svg" >}}
+{{% /fragment %}}
+{{% fragment class="col" %}}
+{{< image height="20" src="/balance-law-svgrepo-com_v2.svg" >}}
+{{% /fragment %}}
+{{% /row %}}
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
-{{< image height="15" src="/businessman-svgrepo-com.svg" >}}
-{{< image height="15" src="/money-cash-svgrepo-com.svg" >}}
+{{% row %}}
+{{% fragment class="col" %}}
+{{< image height="20" src="/businessman-svgrepo-com.svg" >}}
+{{% /fragment %}}
+{{% fragment class="col" %}}
+{{< image height="20" src="/money-cash-svgrepo-com.svg" >}}
+{{% /fragment %}}
+{{% /row %}}
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
-{{< image height="15" src="/technologist-medium-skin-tone-svgrepo-com.svg" >}}
-{{< image height="15" src="/free-technology-icon.svg" >}}
+{{% row %}}
+{{% fragment class="col" %}}
+{{< image height="20" src="/technologist-medium-skin-tone-svgrepo-com.svg" >}}
+{{% /fragment %}}
+{{% fragment class="col" %}}
+{{< image height="20" src="/free-technology-icon.svg" >}}
+{{% /fragment %}}
+{{% /row %}}
 
 {{% /fragment %}}
 {{% /row %}}
