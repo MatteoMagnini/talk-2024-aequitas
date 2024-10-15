@@ -166,6 +166,8 @@ An example is the income.
 #### Group vs. Individual fairness
 
 Group fairness is about **treating groups equally**, while individual fairness is about **treating similar individuals equally**.
+Individual fairness metrics are more *computationally expensive* and because of that less common in practice.
+However, also group fairness metrics can be computationally expensive.
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
@@ -173,8 +175,8 @@ Group fairness is about **treating groups equally**, while individual fairness i
 #### Which metric?
 
 - Demographic/statistical parity: how much model's predictions are **independent** of the protected attribute. 
-- Disparate impact: how much the model disproportionately affects a group.
-- Equalized odds: how much the model equally predicts a given output for all the groups.
+- Disparate impact: how much the model **disproportionately** affects a group.
+- Equalized odds: how much the model **equally predicts** a given output for all the groups.
 
 {{% /fragment %}}
 {{% /row %}}
@@ -184,6 +186,11 @@ Group fairness is about **treating groups equally**, while individual fairness i
 {{% slide auto-animate=true preload=true background-iframe="logo-right.html" transition="zoom" %}}
 ## FaUCI {.highlight}
 ### Fairness under Constraints Injection {.accent}
+
+We design FaUCI in order to be *agnostic* to both the fairness metric used and to the protected attribute type:
+- we considered **demographic parity**, **disparate impact**, and **equalized odds** (but any other metric can be used)
+- we generalized the metric to work with **binary**, **categorical**, and **continuous** protected attributes
+- we also considered ad-hoc weights for the groups to cover *corner cases* (e.g., strong imbalance)
 
 ---
 
