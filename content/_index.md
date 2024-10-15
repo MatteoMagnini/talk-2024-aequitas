@@ -165,10 +165,16 @@ An example is the income.
 {{% fragment class="col" %}}
 #### Group vs. Individual fairness
 
+Group fairness is about **treating groups equally**, while individual fairness is about **treating similar individuals equally**.
+
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
 #### Which metric?
+
+- Demographic/statistical parity: how much model's predictions are **independent** of the protected attribute. 
+- Disparate impact: how much the model disproportionately affects a group.
+- Equalized odds: how much the model equally predicts a given output for all the groups.
 
 {{% /fragment %}}
 {{% /row %}}
