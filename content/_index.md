@@ -95,17 +95,26 @@ The model is treated as a black-box and only the **predictions are adjusted** to
 
 {{% row %}}
 {{% fragment class="col" %}}
-#### Metric computation
+#### Penalty function
+
+A function, usually derived from a fairness metric, is chosen to *measure a violation* of fairness/bias.
+This function takes into account the **input data** and the **model's predictions**.
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
-#### Regularization
+#### Function computation
+
+Because fairness metrics require **statistical distributions** to be computed, these distributions are *estimated on a subset (batch) of the data*. 
+The actual computation of the fairness metric is therefore done during the loss computation.
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
 #### Training
+
+The loss function is a *combination* of the model's loss (e.g., binary cross entropy) and the fairness penalty.
+it is common to use a hyperparameter to balance the two terms.
 
 {{% /fragment %}}
 {{% /row %}}
