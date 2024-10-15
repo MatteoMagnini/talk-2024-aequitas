@@ -130,15 +130,27 @@ it is common to use a hyperparameter to balance the two terms.
 {{% fragment class="col" %}}
 #### Binary
 
+It is the **simplest case**, where the protected attribute can take only two values.
+There are only two groups to be considered, the classic example is the gender.
+
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
 #### Categorical
 
+The protected attribute can take more than two values.
+Here things start to get tricky, as we might **consider all the groups for fairness**.
+Examples are ethnicity, education, and occupation.
+
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
 #### Continuous
+
+The protected attribute is a continuous variable.
+This is the *most complex case*, as we need to **estimate probability densities** to compute fairness metrics.
+An example is the income.
+
 
 {{% /fragment %}}
 {{% /row %}}
