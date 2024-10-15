@@ -30,12 +30,12 @@ Fairness has different meanings to us depending on our *personal background*.
 {{% row %}}
 {{% fragment class="col" %}}
 
-{{< image height="25" src="/woman-judge-light-skin-tone-svgrepo-com.png" >}}
+{{< image height="25" src="/woman-judge-light-skin-tone-svgrepo-com.svg" >}}
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
-{{< image height="25" src="/businessman-svgrepo-com.png" >}}
+{{< image height="25" src="/businessman-svgrepo-com.svg" >}}
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
@@ -45,8 +45,12 @@ Fairness has different meanings to us depending on our *personal background*.
 {{% /fragment %}}
 {{% /row %}}
 
+{{% row %}}
+{{% fragment class="col" %}}
 For people with predominantly scientific studies, fairness is something that should be **objectively measurable**.
 This is usually translated into the *fulfillment* of one or multiple fairness **metrics**.
+{{% /fragment %}}
+{{% /row %}}
 
 ---
 
