@@ -25,6 +25,11 @@ aliases = [
 ## Context {.highlight}
 ### What do we mean by fairness? {.accent}
 
+Fairness has different meanings to us depending on our *personal background*.
+
+For people with predominantly scientific studies, fairness is something that should be **objectively measurable**.
+
+This is usually translated into the *fulfillment* of one or multiple fairness **metrics**.
 
 ---
 
@@ -67,17 +72,64 @@ The model is treated as a black-box and only the **predictions are adjusted** to
 ## Context {.highlight}
 ### The in-processing techniques {.accent}
 
+{{% row %}}
+{{% fragment class="col" %}}
+#### Metric computation
+
+{{% /fragment %}}
+{{% fragment class="col" %}}
+
+#### Regularization
+
+{{% /fragment %}}
+{{% fragment class="col" %}}
+
+#### Training
+
+{{% /fragment %}}
+{{% /row %}}
+
+
 ---
     
 {{% slide auto-animate=true preload=true background-iframe="logo-right.html" transition="zoom" %}}
 ## Open challenges {.highlight}
 ### Types of protected attributes {.accent}
 
+{{% row %}}
+{{% fragment class="col" %}}
+#### Binary
+
+{{% /fragment %}}
+{{% fragment class="col" %}}
+
+#### Categorical
+
+{{% /fragment %}}
+{{% fragment class="col" %}}
+
+#### Continuous
+
+{{% /fragment %}}
+{{% /row %}}
+
 ---
 
 {{% slide auto-animate=true preload=true background-iframe="logo-right.html" transition="zoom" %}}
 ## Open challenges {.highlight}
 ### Fairness metrics {.accent}
+
+{{% row %}}
+{{% fragment class="col" %}}
+#### Group vs. Individual fairness
+
+{{% /fragment %}}
+{{% fragment class="col" %}}
+
+#### Which metric?
+
+{{% /fragment %}}
+{{% /row %}}
 
 ---
 
@@ -93,8 +145,25 @@ The model is treated as a black-box and only the **predictions are adjusted** to
 
 ---
 
+{{% slide auto-animate=true preload=true background-iframe="logo-right.html" transition="zoom" %}}
 ## Future directions {.highlight}
 
+{{% row %}}
+{{% fragment class="col" %}}
+#### Intersectionality
+
+{{% /fragment %}}
+{{% fragment class="col" %}}
+
+#### Language for fairness
+
+{{% /fragment %}}
+{{% fragment class="col" %}}
+
+#### AutoML for fairness
+
+{{% /fragment %}}
+{{% /row %}}
 
 ---
 
