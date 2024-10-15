@@ -150,14 +150,16 @@ An example is the income.</p>
 <div class="container">
 <span class="fragment col">
   <h4 id="group-vs-individual-fairness">Group vs. Individual fairness</h4>
-<p>Group fairness is about <strong>treating groups equally</strong>, while individual fairness is about <strong>treating similar individuals equally</strong>.</p>
+<p>Group fairness is about <strong>treating groups equally</strong>, while individual fairness is about <strong>treating similar individuals equally</strong>.
+Individual fairness metrics are more <em>computationally expensive</em> and because of that less common in practice.
+However, also group fairness metrics can be computationally expensive.</p>
 </span>
 <span class="fragment col">
   <h4 id="which-metric">Which metric?</h4>
 <ul>
 <li>Demographic/statistical parity: how much model’s predictions are <strong>independent</strong> of the protected attribute.</li>
-<li>Disparate impact: how much the model disproportionately affects a group.</li>
-<li>Equalized odds: how much the model equally predicts a given output for all the groups.</li>
+<li>Disparate impact: how much the model <strong>disproportionately</strong> affects a group.</li>
+<li>Equalized odds: how much the model <strong>equally predicts</strong> a given output for all the groups.</li>
 </ul>
 </span>
 </div>
@@ -165,6 +167,12 @@ An example is the income.</p>
 <section data-noprocess="" data-shortcode-slide="" data-auto-animate="true" data-background-iframe="https://MatteoMagnini.github.io/talk-2024-aequitas/logo-right.html" data-preload="true" data-transition="zoom">
 <h2 class="highlight" id="fauci">FaUCI</h2>
 <h3 class="accent" id="fairness-under-constraints-injection">Fairness under Constraints Injection</h3>
+<p>We design FaUCI in order to be <em>agnostic</em> to both the fairness metric used and to the protected attribute type:</p>
+<ul>
+<li>we considered <strong>demographic parity</strong>, <strong>disparate impact</strong>, and <strong>equalized odds</strong> (but any other metric can be used)</li>
+<li>we generalized the metric to work with <strong>binary</strong>, <strong>categorical</strong>, and <strong>continuous</strong> protected attributes</li>
+<li>we also considered ad-hoc weights for the groups to cover <em>corner cases</em> (e.g., strong imbalance)</li>
+</ul>
 </section>
 <section data-noprocess="" data-shortcode-slide="" data-auto-animate="true" data-background-iframe="https://MatteoMagnini.github.io/talk-2024-aequitas/logo-right.html" data-preload="true" data-transition="zoom">
 <h2 class="highlight" id="fauci-1">FaUCI</h2>
