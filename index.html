@@ -105,13 +105,19 @@ This is usually translated into the <em>fulfillment</em> of one or multiple fair
 <h3 class="accent" id="the-in-processing-techniques">The in-processing techniques</h3>
 <div class="container">
 <span class="fragment col">
-  <h4 id="metric-computation">Metric computation</h4>
+  <h4 id="penalty-function">Penalty function</h4>
+<p>A function, usually derived from a fairness metric, is chosen to <em>measure a violation</em> of fairness/bias.
+This function takes into account the <strong>input data</strong> and the <strong>model’s predictions</strong>.</p>
 </span>
 <span class="fragment col">
-  <h4 id="regularization">Regularization</h4>
+  <h4 id="function-computation">Function computation</h4>
+<p>Because fairness metrics require <strong>statistical distributions</strong> to be computed, these distributions are <em>estimated on a subset (batch) of the data</em>.
+The actual computation of the fairness metric is therefore done during the loss computation.</p>
 </span>
 <span class="fragment col">
   <h4 id="training">Training</h4>
+<p>The loss function is a <em>combination</em> of the model’s loss (e.g., binary cross entropy) and the fairness penalty.
+it is common to use a hyperparameter to balance the two terms.</p>
 </span>
 </div>
 </section>
