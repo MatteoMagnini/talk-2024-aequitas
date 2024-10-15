@@ -127,12 +127,20 @@ it is common to use a hyperparameter to balance the two terms.</p>
 <div class="container">
 <span class="fragment col">
   <h4 id="binary">Binary</h4>
+<p>It is the <strong>simplest case</strong>, where the protected attribute can take only two values.
+There are only two groups to be considered, the classic example is the gender.</p>
 </span>
 <span class="fragment col">
   <h4 id="categorical">Categorical</h4>
+<p>The protected attribute can take more than two values.
+Here things start to get tricky, as we might <strong>consider all the groups for fairness</strong>.
+Examples are ethnicity, education, and occupation.</p>
 </span>
 <span class="fragment col">
   <h4 id="continuous">Continuous</h4>
+<p>The protected attribute is a continuous variable.
+This is the <em>most complex case</em>, as we need to <strong>estimate probability densities</strong> to compute fairness metrics.
+An example is the income.</p>
 </span>
 </div>
 </section>
