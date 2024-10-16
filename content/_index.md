@@ -198,15 +198,27 @@ For this reason, we decided to focus on group fairness metrics.
 ## FaUCI {.highlight}
 ### Fairness under Constraints Injection {.accent}
 
+{{% row %}}
+{{% fragment class="col" %}}
 We design FaUCI in order to be *agnostic* to the fairness metric used and to the protected attribute type:
 - we considered **demographic parity**, **disparate impact**, and **equalized odds** (any other metric can be used)
 - we generalized the metric to work with **binary**, **categorical**, and **continuous** protected attributes
 - we also considered ad-hoc weights for the groups to cover *corner cases* (e.g., strong imbalance)
+{{% /fragment %}}
+{{% /row %}}
 
-- Loss function: $$L_{h,A}(X, Y) = E(h(X), Y) + \lambda F_{h,A}(X, Y)$$
-- Demographic Parity: $$DP_{h, A}(X) = \sum_{a \in A} \left\|\left\| E[h(X) \mid A{=}a] - E[h(X)] \right\|\right\|$$
-- Weighted DP: $$WDP_{h, A}(X) = \sum_{a \in A} \left\|\left\| E[h(X) \mid A{=}a] - E[h(X)] \right\|\right\| \cdot w_{a}$$
-- Generalised DP: $$GDP_{h, A}(X) = \int_{l}^{u}(\left\|\left\|\E[h(X) \mid A{=}a] - \E[h(X)]\right\|\right\| \cdot w_{a}) \cdot da$$
+{{% row %}}
+{{% fragment class="col" %}}
+Loss functions and new metrics:
+- $$L_{h,A}(X, Y) = E(h(X), Y) + \lambda F_{h,A}(X, Y)$$
+- $$WDP_{h, A}(X) = \sum_{a \in A} \left\|\left\| E[h(X) \mid A{=}a] - E[h(X)] \right\|\right\| \cdot w_{a}$$
+- $$GDP_{h, A}(X) = \int_{l}^{u}(\left\|\left\|\E[h(X) \mid A{=}a] - \E[h(X)]\right\|\right\| \cdot w_{a}) \cdot da$$
+- $$WDI_{h, A}(X) = \sum_{a \in A} \eta\left(\frac{E\left[h(X) \mid A{=}a\right]}{E\left[h(X) \mid A{\ne}a\right]}\right) \cdot w_{a}$$
+- $$GDI_{h, A}(X) = \int_{l}^{u} \eta\left(\frac{E\left[h(X) \mid A{=}a\right]}{E\left[h(X) \mid A{\ne}a\right]}\right) \cdot w_{a} \cdot da$$
+- $$WEO_{h, A}(X) = \sum_{(a, y)}^{A \times Y} eo_{h, A}(X, a, y) \cdot w_{a}$$
+- $$GEO_{h, A}(X) = \int_{l}^{u} \sum_{(a, y)}^{A \times Y} (eo_{h, A}(X, a, 0) + eo_{h, A}(X, a, 1)) \cdot w_{a} \cdot da$$
+{{% /fragment %}}
+{{% /row %}}
 
 ---
 
