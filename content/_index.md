@@ -202,7 +202,11 @@ We design FaUCI in order to be *agnostic* to the fairness metric used and to the
 - we considered **demographic parity**, **disparate impact**, and **equalized odds** (any other metric can be used)
 - we generalized the metric to work with **binary**, **categorical**, and **continuous** protected attributes
 - we also considered ad-hoc weights for the groups to cover *corner cases* (e.g., strong imbalance)
-$$L_{h,A}(X, Y) = E(h(X), Y) + \lambda F_{h,A}(X, Y)$$
+
+- Loss function: $$L_{h,A}(X, Y) = E(h(X), Y) + \lambda F_{h,A}(X, Y)$$
+- Demographic Parity: $$DP_{h, A}(X) = \sum_{a \in A} \left\|\left\| E[h(X) \mid A{=}a] - E[h(X)] \right\|\right\|$$
+- Weighted DP: $$WDP_{h, A}(X) = \sum_{a \in A} \left\|\left\| E[h(X) \mid A{=}a] - E[h(X)] \right\|\right\| \cdot w_{a}$$
+- Generalised DP: $$GDP_{h, A}(X) = \int_{l}^{u}(\left\|\left\|\E[h(X) \mid A{=}a] - \E[h(X)]\right\|\right\| \cdot w_{a}) \cdot da$$
 
 ---
 
