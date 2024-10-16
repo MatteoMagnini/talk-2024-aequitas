@@ -172,14 +172,20 @@ An example is the income.
 #### Group vs. Individual fairness
 
 Group fairness is about **treating groups equally**, while individual fairness is about **treating similar individuals equally**.
+
 Individual fairness metrics are more *computationally expensive* and because of that less common in practice.
 
 However, also group fairness metrics can be computationally expensive.
+For this reason, we decided to focus on group fairness metrics.
 
 {{% /fragment %}}
+
+{{% fragment class="col" %}}
+{{% /fragment %}}
+
 {{% fragment class="col" %}}
 
-- *Demographic/statistical parity* how much model's predictions are **independent** of the protected attribute.
+- *Demographic/statistical parity* how much predictions are **independent** of the protected attribute.
 <small>$$DP_{h, A}(X) = \sum_{a \in A} \left\|\left\| E[h(X) \mid A{=}a] - E[h(X)] \right\|\right\|$$</small>
 - *Disparate impact* how much the model **disproportionately** affects a group.
 <small>$$DI_{h, A}(X) = \min\left(\frac{E[h(X) \mid A{=}1]}{E[h(X) \mid A{=}0]},\frac{E[h(X) \mid A{=}0]}{E[h(X) \mid A{=}1]}\right)$$</small>
@@ -200,6 +206,7 @@ We design FaUCI in order to be *agnostic* to the fairness metric used and to the
 - we considered **demographic parity**, **disparate impact**, and **equalized odds** (any other metric can be used)
 - we generalized the metric to work with **binary**, **categorical**, and **continuous** protected attributes
 - we also considered ad-hoc weights for the groups to cover *corner cases* (e.g., strong imbalance)
+$$\L_{h,A}(X, Y) = E(h(X), Y) + \lambda F_{h,A}(X, Y)$$
 
 ---
 
@@ -245,6 +252,7 @@ We design FaUCI in order to be *agnostic* to the fairness metric used and to the
 
 FaUCI can already be used to **consider multiple protected attributes** (subgroups) at the same time.
 However, we still need to perform a wide empirical study of the method to understand its performance in these cases.
+$$L_{h,\bar{A}}(X, Y) = E(h(X), Y) + \lambda_{1} F_{h,A_1}(X) + \dots + \lambda_{n} F_{h,A_n}(X)$$
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
@@ -253,6 +261,7 @@ However, we still need to perform a wide empirical study of the method to unders
 
 We want to develop a **language** to help users to define **ad-hoc fairness constraints** in a more intuitive way.
 Many potential users do not have a strong background in ML and statistics, so we aim to **make fairness techniques more accessible**.
+This is something very similar to what happen with *symbolic knowledge injection* methods.
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
@@ -260,11 +269,12 @@ Many potential users do not have a strong background in ML and statistics, so we
 #### AutoML for fairness {.accent}
 
 Because the training of ML models requires many hyperparameters -- and with the addition of fairness constraints there is usually one more -- we want to use AutoML tools to study the **convergence of the best hyperparameters** and how well they perform.
+In this way we can fairly compare different fairness techniques and understand which one is the best for a task.
 
 {{% /fragment %}}
 {{% /row %}}
 
 ---
 
-{{% slide auto-animate=true preload=true background-iframe="logo-right.html" transition="zoom" %}}
+{{% slide auto-animate=true preload=true background-iframe="logo-big.html" transition="zoom" %}}
 ## Thank you for your attention! {.highlight}
