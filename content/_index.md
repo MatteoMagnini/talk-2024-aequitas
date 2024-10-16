@@ -173,7 +173,7 @@ However, also group fairness metrics can be computationally expensive.
 {{% fragment class="col" %}}
 
 #### Which metric?
-
+ 
 - Demographic/statistical parity: how much model's predictions are **independent** of the protected attribute. 
 - Disparate impact: how much the model **disproportionately** affects a group.
 - Equalized odds: how much the model **equally predicts** a given output for all the groups.
@@ -187,8 +187,8 @@ However, also group fairness metrics can be computationally expensive.
 ## FaUCI {.highlight}
 ### Fairness under Constraints Injection {.accent}
 
-We design FaUCI in order to be *agnostic* to both the fairness metric used and to the protected attribute type:
-- we considered **demographic parity**, **disparate impact**, and **equalized odds** (but any other metric can be used)
+We design FaUCI in order to be *agnostic* to the fairness metric used and to the protected attribute type:
+- we considered **demographic parity**, **disparate impact**, and **equalized odds** (any other metric can be used)
 - we generalized the metric to work with **binary**, **categorical**, and **continuous** protected attributes
 - we also considered ad-hoc weights for the groups to cover *corner cases* (e.g., strong imbalance)
 
@@ -196,7 +196,37 @@ We design FaUCI in order to be *agnostic* to both the fairness metric used and t
 
 {{% slide auto-animate=true preload=true background-iframe="logo-right.html" transition="zoom" %}}
 ## FaUCI {.highlight}
-### Results {.accent}
+### Results on the Adult dataset {.accent}
+
+{{% row %}}
+{{% fragment class="col" %}}
+
+#### Gender
+    
+{{< image height="30" src="/demographic_parity_sex.pdf" >}}
+{{< image height="30" src="/disparate_impact_sex.pdf" >}}
+{{< image height="30" src="/equalized_odds_sex.pdf" >}}
+
+{{% /fragment %}}
+{{% fragment class="col" %}}
+
+#### Ethnicity
+
+{{< image height="30" src="/demographic_parity_ethnicity.pdf" >}}
+{{< image height="30" src="/disparate_impact_ethnicity.pdf" >}}
+{{< image height="30" src="/equalized_odds_ethnicity.pdf" >}}
+
+{{% /fragment %}}
+{{% fragment class="col" %}}
+
+#### Age
+
+{{< image height="30" src="/demographic_parity_age.pdf" >}}
+{{< image height="30" src="/disparate_impact_age.pdf" >}}
+{{< image height="30" src="/equalized_odds_age.pdf" >}}
+    
+{{% /fragment %}}
+{{% /row %}}
 
 ---
 
