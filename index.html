@@ -167,15 +167,13 @@ Individual fairness metrics are more <em>computationally expensive</em> and beca
 <p>However, also group fairness metrics can be computationally expensive.</p>
 </span>
 <span class="fragment col">
-  <ul>
-<li>Demographic/statistical parity: how much model’s predictions are <strong>independent</strong> of the protected attribute.
-$$DP_{h, A}(X) = \sum_{a \in A} \left|\left| E[h(X) \mid A{=}a] - E[h(X)] \right|\right|$$</li>
-<li>Disparate impact: how much the model <strong>disproportionately</strong> affects a group.
-$$DI_{h, A}(X) = \min(\frac{E[h(X) \mid A{=}1]}{E[h(X) \mid A{=}0]},\frac{E[h(X) \mid A{=}0]}{E[h(X) \mid A{=}1]})$$</li>
-<li>Equalized odds: how much the model <strong>equally predicts</strong> a given output for all the groups.
-$$EO_{h, A}(X) = \sum_{(a, y)}^{A \times Y} eo_{h, A}(X, a, y)$$
-$$eo_{h, A}(X, a, y) = \left|\left| E[h(X) \mid A{=}a, Y{=}y] - E[h(X) \mid Y{=}y] \right|\right|$$</li>
-</ul>
+  <p><em>Demographic/statistical parity</em>: how much model’s predictions are <strong>independent</strong> of the protected attribute.
+<small>$$DP_{h, A}(X) = \sum_{a \in A} \left|\left| E[h(X) \mid A{=}a] - E[h(X)] \right|\right|$$</small>
+<em>Disparate impact</em>: how much the model <strong>disproportionately</strong> affects a group.
+<small>$$DI_{h, A}(X) = \min(\frac{E[h(X) \mid A{=}1]}{E[h(X) \mid A{=}0]},\frac{E[h(X) \mid A{=}0]}{E[h(X) \mid A{=}1]})$$</small>
+<em>Equalized odds</em>: how much the model <strong>equally predicts</strong> a given output for all the groups.
+<small>$$EO_{h, A}(X) = \sum_{(a, y)}^{A \times Y} eo_{h, A}(X, a, y)$$</small>
+<small>$$eo_{h, A}(X, a, y) = \left|\left| E[h(X) \mid A{=}a, Y{=}y] - E[h(X) \mid Y{=}y] \right|\right|$$</small></p>
 </span>
 </div>
 </section>
@@ -194,7 +192,7 @@ $$eo_{h, A}(X, a, y) = \left|\left| E[h(X) \mid A{=}a, Y{=}y] - E[h(X) \mid Y{=}
 <h3 class="accent" id="results-on-the-adult-dataset">Results on the Adult dataset</h3>
 <div class="container">
 <span class="fragment col">
-  <h4 id="gender">Gender</h4>
+  <h4 id="gender-binary">Gender (binary)</h4>
 <figure class="">
     <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/demographic_parity_sex.png" style="height:270px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
     <figcaption>  </figcaption>
@@ -205,7 +203,7 @@ $$eo_{h, A}(X, a, y) = \left|\left| E[h(X) \mid A{=}a, Y{=}y] - E[h(X) \mid Y{=}
   </figure>
 </span>
 <span class="fragment col">
-  <h4 id="ethnicity">Ethnicity</h4>
+  <h4 id="ethnicity-categorical">Ethnicity (categorical)</h4>
 <figure class="">
     <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/demographic_parity_ethnicity.png" style="height:270px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
     <figcaption>  </figcaption>
@@ -216,7 +214,7 @@ $$eo_{h, A}(X, a, y) = \left|\left| E[h(X) \mid A{=}a, Y{=}y] - E[h(X) \mid Y{=}
   </figure>
 </span>
 <span class="fragment col">
-  <h4 id="age">Age</h4>
+  <h4 id="age-continuous">Age (continuous)</h4>
 <figure class="">
     <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/demographic_parity_age.png" style="height:270px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
     <figcaption>  </figcaption>
