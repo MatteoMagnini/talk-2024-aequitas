@@ -167,13 +167,15 @@ Individual fairness metrics are more <em>computationally expensive</em> and beca
 <p>However, also group fairness metrics can be computationally expensive.</p>
 </span>
 <span class="fragment col">
-  <p><em>Demographic/statistical parity</em>: how much model’s predictions are <strong>independent</strong> of the protected attribute.
-<small>$$DP_{h, A}(X) = \sum_{a \in A} \left|\left| E[h(X) \mid A{=}a] - E[h(X)] \right|\right|$$</small>
-<em>Disparate impact</em>: how much the model <strong>disproportionately</strong> affects a group.
-<small>$$DI_{h, A}(X) = \min(\frac{E[h(X) \mid A{=}1]}{E[h(X) \mid A{=}0]},\frac{E[h(X) \mid A{=}0]}{E[h(X) \mid A{=}1]})$$</small>
-<em>Equalized odds</em>: how much the model <strong>equally predicts</strong> a given output for all the groups.
+  <ul>
+<li><em>Demographic/statistical parity</em> how much model’s predictions are <strong>independent</strong> of the protected attribute.
+<small>$$DP_{h, A}(X) = \sum_{a \in A} \left|\left| E[h(X) \mid A{=}a] - E[h(X)] \right|\right|$$</small></li>
+<li><em>Disparate impact</em> how much the model <strong>disproportionately</strong> affects a group.
+<small>$$DI_{h, A}(X) = \min\left(\frac{E[h(X) \mid A{=}1]}{E[h(X) \mid A{=}0]},\frac{E[h(X) \mid A{=}0]}{E[h(X) \mid A{=}1]}\right)$$</small></li>
+<li><em>Equalized odds</em> how much the model <strong>equally predicts</strong> a given output for all the groups.
 <small>$$EO_{h, A}(X) = \sum_{(a, y)}^{A \times Y} eo_{h, A}(X, a, y)$$</small>
-<small>$$eo_{h, A}(X, a, y) = \left|\left| E[h(X) \mid A{=}a, Y{=}y] - E[h(X) \mid Y{=}y] \right|\right|$$</small></p>
+<small>$$eo_{h, A}(X, a, y) = \left|\left| E[h(X) \mid A{=}a, Y{=}y] - E[h(X) \mid Y{=}y] \right|\right|$$</small></li>
+</ul>
 </span>
 </div>
 </section>
