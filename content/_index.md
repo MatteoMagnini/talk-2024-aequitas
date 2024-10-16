@@ -180,7 +180,7 @@ For this reason, we decided to focus on group fairness metrics.
 
 {{% /fragment %}}
 
-{{% fragment class="col" %}}
+{{% fragment class="col" width="2%" %}}
 {{% /fragment %}}
 
 {{% fragment class="col" %}}
@@ -255,6 +255,9 @@ However, we still need to perform a wide empirical study of the method to unders
 $$L_{h,\bar{A}}(X, Y) = E(h(X), Y) + \lambda_{1} F_{h,A_1}(X) + \dots + \lambda_{n} F_{h,A_n}(X)$$
 
 {{% /fragment %}}
+{{% /row %}}
+
+{{% row %}}
 {{% fragment class="col" %}}
 
 #### Language for fairness {.accent}
