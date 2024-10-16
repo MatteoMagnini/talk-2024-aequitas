@@ -174,9 +174,12 @@ However, also group fairness metrics can be computationally expensive.
 
 #### Which metric?
  
-- Demographic/statistical parity: how much model's predictions are **independent** of the protected attribute. 
+- Demographic/statistical parity: how much model's predictions are **independent** of the protected attribute.
+  $$\DP{h, A}{X} = \sum_{a \in A} \left\| \Evalue[h(X) \mid A{=}a] - \Evalue[h(X)] \right\|$$
 - Disparate impact: how much the model **disproportionately** affects a group.
+  $$\DI{h, A}{X} = \min_{a \in A} \frac{\Evalue[h(X) = 1 \mid A{=}a]}{\Evalue[h(X) = 1]}$$
 - Equalized odds: how much the model **equally predicts** a given output for all the groups.
+  $$\EO{h, A}{X, Y} = \sum_{a \in A} \left\| \Evalue[h(X) = 1 \mid A{=}a, Y{=}1] - \Evalue[h(X) = 1 \mid A{=}a, Y{=}0] \right\|$$
 
 {{% /fragment %}}
 {{% /row %}}
@@ -232,7 +235,7 @@ We design FaUCI in order to be *agnostic* to the fairness metric used and to the
 
 {{% row %}}
 {{% fragment class="col" %}}
-#### Intersectionality
+#### Intersectionality {.accent}
 
 FaUCI can already be used to **consider multiple protected attributes** (subgroups) at the same time.
 However, we still need to perform a wide empirical study of the method to understand its performance in these cases.
@@ -240,7 +243,7 @@ However, we still need to perform a wide empirical study of the method to unders
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
-#### Language for fairness
+#### Language for fairness {.accent}
 
 We want to develop a **language** to help users to define **ad-hoc fairness constraints** in a more intuitive way.
 Many potential users do not have a strong background in ML and statistics, so we aim to **make fairness techniques more accessible**.
@@ -248,7 +251,7 @@ Many potential users do not have a strong background in ML and statistics, so we
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
-#### AutoML for fairness
+#### AutoML for fairness {.accent}
 
 Because the training of ML models requires many hyperparameters -- and with the addition of fairness constraints there is usually one more -- we want to use AutoML tools to study the **convergence of the best hyperparameters** and how well they perform.
 
