@@ -127,17 +127,29 @@ it is common to use a hyperparameter to balance the two terms.</p>
 <div class="container">
 <span class="fragment col">
   <h4 id="binary">Binary</h4>
+<figure class="">
+    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/binary-data.svg" style="height:180px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
+    <figcaption>  </figcaption>
+  </figure>
 <p>It is the <strong>simplest case</strong>, where the protected attribute can take only two values.
 There are only two groups to be considered, the classic example is the gender.</p>
 </span>
 <span class="fragment col">
   <h4 id="categorical">Categorical</h4>
+<figure class="">
+    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/categorical-data.svg" style="height:180px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
+    <figcaption>  </figcaption>
+  </figure>
 <p>The protected attribute can take more than two values.
 Here things start to get tricky, as we might <strong>consider all the groups for fairness</strong>.
 Examples are ethnicity, education, and occupation.</p>
 </span>
 <span class="fragment col">
   <h4 id="continuous">Continuous</h4>
+<figure class="">
+    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/continuous-data.svg" style="height:180px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
+    <figcaption>  </figcaption>
+  </figure>
 <p>The protected attribute is a continuous variable.
 This is the <em>most complex case</em>, as we need to <strong>estimate probability densities</strong> to compute fairness metrics.
 An example is the income.</p>
@@ -151,19 +163,18 @@ An example is the income.</p>
 <span class="fragment col">
   <h4 id="group-vs-individual-fairness">Group vs. Individual fairness</h4>
 <p>Group fairness is about <strong>treating groups equally</strong>, while individual fairness is about <strong>treating similar individuals equally</strong>.
-Individual fairness metrics are more <em>computationally expensive</em> and because of that less common in practice.
-However, also group fairness metrics can be computationally expensive.</p>
+Individual fairness metrics are more <em>computationally expensive</em> and because of that less common in practice.</p>
+<p>However, also group fairness metrics can be computationally expensive.</p>
 </span>
 <span class="fragment col">
-  <h4 id="which-metric">Which metric?</h4>
-<ul>
+  <ul>
 <li>Demographic/statistical parity: how much model’s predictions are <strong>independent</strong> of the protected attribute.
-$$DP_{h, A}(X) = \sum_{a \in A} \left| E[h(X) \mid A{=}a] - E[h(X)] \right|$$</li>
+$$DP_{h, A}(X) = \sum_{a \in A} \left|\left| E[h(X) \mid A{=}a] - E[h(X)] \right|\right|$$</li>
 <li>Disparate impact: how much the model <strong>disproportionately</strong> affects a group.
 $$DI_{h, A}(X) = \min(\frac{E[h(X) \mid A{=}1]}{E[h(X) \mid A{=}0]},\frac{E[h(X) \mid A{=}0]}{E[h(X) \mid A{=}1]})$$</li>
 <li>Equalized odds: how much the model <strong>equally predicts</strong> a given output for all the groups.
-$$EO_{h, A}(X) = \sum_{(a, y)}^{A \times Y} \eo{h, A}{X, a, y}$$
-$$eo_{h, A}(X, a, y) = \left| E[h(X) \mid A{=}a, Y{=}y] - E[h(X) \mid Y{=}y] \right|$$</li>
+$$EO_{h, A}(X) = \sum_{(a, y)}^{A \times Y} eo_{h, A}(X, a, y)$$
+$$eo_{h, A}(X, a, y) = \left|\left| E[h(X) \mid A{=}a, Y{=}y] - E[h(X) \mid Y{=}y] \right|\right|$$</li>
 </ul>
 </span>
 </div>
