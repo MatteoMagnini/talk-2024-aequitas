@@ -234,15 +234,23 @@ We design FaUCI in order to be *agnostic* to the fairness metric used and to the
 {{% fragment class="col" %}}
 #### Intersectionality
 
+FaUCI can already be used to **consider multiple protected attributes** (subgroups) at the same time.
+However, we still need to perform a wide empirical study of the method to understand its performance in these cases.
+
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
 #### Language for fairness
 
+We want to develop a **language** to help users to define **ad-hoc fairness constraints** in a more intuitive way.
+Many potential users do not have a strong background in ML and statistics, so we aim to **make fairness techniques more accessible**.
+
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
 #### AutoML for fairness
+
+Because the training of ML models requires many hyperparameters -- and with the addition of fairness constraints there is usually one more -- we want to use AutoML tools to study the **convergence of the best hyperparameters** and how well they perform.
 
 {{% /fragment %}}
 {{% /row %}}
