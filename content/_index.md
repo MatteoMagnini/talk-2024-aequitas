@@ -203,27 +203,27 @@ We design FaUCI in order to be *agnostic* to the fairness metric used and to the
 
 #### Gender
     
-{{< image height="30" src="/demographic_parity_sex.pdf" >}}
-{{< image height="30" src="/disparate_impact_sex.pdf" >}}
-{{< image height="30" src="/equalized_odds_sex.pdf" >}}
+{{< image height="30" src="/demographic_parity_sex.png" >}}
+{{< image height="30" src="/disparate_impact_sex.png" >}}
+{{< image height="30" src="/equalized_odds_sex.png" >}}
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
 #### Ethnicity
 
-{{< image height="30" src="/demographic_parity_ethnicity.pdf" >}}
-{{< image height="30" src="/disparate_impact_ethnicity.pdf" >}}
-{{< image height="30" src="/equalized_odds_ethnicity.pdf" >}}
+{{< image height="30" src="/demographic_parity_ethnicity.png" >}}
+{{< image height="30" src="/disparate_impact_ethnicity.png" >}}
+{{< image height="30" src="/equalized_odds_ethnicity.png" >}}
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
 #### Age
 
-{{< image height="30" src="/demographic_parity_age.pdf" >}}
-{{< image height="30" src="/disparate_impact_age.pdf" >}}
-{{< image height="30" src="/equalized_odds_age.pdf" >}}
+{{< image height="30" src="/demographic_parity_age.png" >}}
+{{< image height="30" src="/disparate_impact_age.png" >}}
+{{< image height="30" src="/equalized_odds_age.png" >}}
     
 {{% /fragment %}}
 {{% /row %}}
