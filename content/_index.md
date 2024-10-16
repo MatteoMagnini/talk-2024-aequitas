@@ -179,13 +179,13 @@ However, also group fairness metrics can be computationally expensive.
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
-- Demographic/statistical parity: how much model's predictions are **independent** of the protected attribute.
-  $$DP_{h, A}(X) = \sum_{a \in A} \left\|\left\| E[h(X) \mid A{=}a] - E[h(X)] \right\|\right\|$$
-- Disparate impact: how much the model **disproportionately** affects a group.
-  $$DI_{h, A}(X) = \min(\frac{E[h(X) \mid A{=}1]}{E[h(X) \mid A{=}0]},\frac{E[h(X) \mid A{=}0]}{E[h(X) \mid A{=}1]})$$
-- Equalized odds: how much the model **equally predicts** a given output for all the groups.
-  $$EO_{h, A}(X) = \sum_{(a, y)}^{A \times Y} eo_{h, A}(X, a, y)$$
-  $$eo_{h, A}(X, a, y) = \left\|\left\| E[h(X) \mid A{=}a, Y{=}y] - E[h(X) \mid Y{=}y] \right\|\right\|$$
+*Demographic/statistical parity*: how much model's predictions are **independent** of the protected attribute.
+<small>$$DP_{h, A}(X) = \sum_{a \in A} \left\|\left\| E[h(X) \mid A{=}a] - E[h(X)] \right\|\right\|$$</small>
+*Disparate impact*: how much the model **disproportionately** affects a group.
+<small>$$DI_{h, A}(X) = \min(\frac{E[h(X) \mid A{=}1]}{E[h(X) \mid A{=}0]},\frac{E[h(X) \mid A{=}0]}{E[h(X) \mid A{=}1]})$$</small>
+*Equalized odds*: how much the model **equally predicts** a given output for all the groups.
+<small>$$EO_{h, A}(X) = \sum_{(a, y)}^{A \times Y} eo_{h, A}(X, a, y)$$</small>
+<small>$$eo_{h, A}(X, a, y) = \left\|\left\| E[h(X) \mid A{=}a, Y{=}y] - E[h(X) \mid Y{=}y] \right\|\right\|$$</small>
 
 {{% /fragment %}}
 {{% /row %}}
@@ -210,7 +210,7 @@ We design FaUCI in order to be *agnostic* to the fairness metric used and to the
 {{% row %}}
 {{% fragment class="col" %}}
 
-#### Gender
+#### Gender (binary)
     
 {{< image height="30" src="/demographic_parity_sex.png" >}}
 {{< image height="30" src="/equalized_odds_sex.png" >}}
@@ -218,7 +218,7 @@ We design FaUCI in order to be *agnostic* to the fairness metric used and to the
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
-#### Ethnicity
+#### Ethnicity (categorical)
 
 {{< image height="30" src="/demographic_parity_ethnicity.png" >}}
 {{< image height="30" src="/equalized_odds_ethnicity.png" >}}
@@ -226,7 +226,7 @@ We design FaUCI in order to be *agnostic* to the fairness metric used and to the
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
-#### Age
+#### Age (continuous)
 
 {{< image height="30" src="/demographic_parity_age.png" >}}
 {{< image height="30" src="/equalized_odds_age.png" >}}
