@@ -130,6 +130,8 @@ it is common to use a hyperparameter to balance the two terms.
 {{% fragment class="col" %}}
 #### Binary
 
+{{< image height="20" src="/binary-data.svg" >}}
+
 It is the **simplest case**, where the protected attribute can take only two values.
 There are only two groups to be considered, the classic example is the gender.
 
@@ -137,6 +139,8 @@ There are only two groups to be considered, the classic example is the gender.
 {{% fragment class="col" %}}
 
 #### Categorical
+
+{{< image height="20" src="/categorical-data.svg" >}}
 
 The protected attribute can take more than two values.
 Here things start to get tricky, as we might **consider all the groups for fairness**.
@@ -146,6 +150,8 @@ Examples are ethnicity, education, and occupation.
 {{% fragment class="col" %}}
 
 #### Continuous
+
+{{< image height="20" src="/continuous-data.svg" >}}
 
 The protected attribute is a continuous variable.
 This is the *most complex case*, as we need to **estimate probability densities** to compute fairness metrics.
@@ -167,20 +173,19 @@ An example is the income.
 
 Group fairness is about **treating groups equally**, while individual fairness is about **treating similar individuals equally**.
 Individual fairness metrics are more *computationally expensive* and because of that less common in practice.
+
 However, also group fairness metrics can be computationally expensive.
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
-#### Which metric?
- 
 - Demographic/statistical parity: how much model's predictions are **independent** of the protected attribute.
-  $$DP_{h, A}(X) = \sum_{a \in A} \left\| E[h(X) \mid A{=}a] - E[h(X)] \right\|$$
+  $$DP_{h, A}(X) = \sum_{a \in A} \left\|\left\| E[h(X) \mid A{=}a] - E[h(X)] \right\|\right\|$$
 - Disparate impact: how much the model **disproportionately** affects a group.
   $$DI_{h, A}(X) = \min(\frac{E[h(X) \mid A{=}1]}{E[h(X) \mid A{=}0]},\frac{E[h(X) \mid A{=}0]}{E[h(X) \mid A{=}1]})$$
 - Equalized odds: how much the model **equally predicts** a given output for all the groups.
-  $$EO_{h, A}(X) = \sum_{(a, y)}^{A \times Y} \eo{h, A}{X, a, y}$$
-  $$eo_{h, A}(X, a, y) = \left\| E[h(X) \mid A{=}a, Y{=}y] - E[h(X) \mid Y{=}y] \right\|$$
+  $$EO_{h, A}(X) = \sum_{(a, y)}^{A \times Y} eo_{h, A}(X, a, y)$$
+  $$eo_{h, A}(X, a, y) = \left\|\left\| E[h(X) \mid A{=}a, Y{=}y] - E[h(X) \mid Y{=}y] \right\|\right\|$$
 
 {{% /fragment %}}
 {{% /row %}}
