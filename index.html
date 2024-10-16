@@ -168,8 +168,6 @@ An example is the income.</p>
 For this reason, we decided to focus on group fairness metrics.</p>
 </span>
 <span class="fragment col">
-</span>
-<span class="fragment col">
   <ul>
 <li><em>Demographic/statistical parity</em> how much predictions are <strong>independent</strong> of the protected attribute.
 <small>$$DP_{h, A}(X) = \sum_{a \in A} \left|\left| E[h(X) \mid A{=}a] - E[h(X)] \right|\right|$$</small></li>
@@ -190,7 +188,7 @@ For this reason, we decided to focus on group fairness metrics.</p>
 <li>we considered <strong>demographic parity</strong>, <strong>disparate impact</strong>, and <strong>equalized odds</strong> (any other metric can be used)</li>
 <li>we generalized the metric to work with <strong>binary</strong>, <strong>categorical</strong>, and <strong>continuous</strong> protected attributes</li>
 <li>we also considered ad-hoc weights for the groups to cover <em>corner cases</em> (e.g., strong imbalance)
-$$\L_{h,A}(X, Y) = E(h(X), Y) + \lambda F_{h,A}(X, Y)$$</li>
+$$L_{h,A}(X, Y) = E(h(X), Y) + \lambda F_{h,A}(X, Y)$$</li>
 </ul>
 </section>
 <section data-noprocess="" data-shortcode-slide="" data-auto-animate="true" data-background-iframe="https://MatteoMagnini.github.io/talk-2024-aequitas/logo-right.html" data-preload="true" data-transition="zoom">
@@ -238,7 +236,7 @@ $$\L_{h,A}(X, Y) = E(h(X), Y) + \lambda F_{h,A}(X, Y)$$</li>
 <span class="fragment col">
   <h4 class="accent" id="intersectionality">Intersectionality</h4>
 <p>FaUCI can already be used to <strong>consider multiple protected attributes</strong> (subgroups) at the same time.
-However, we still need to perform a wide empirical study of the method to understand its performance in these cases.
+However, we still need to perform a wide empirical study of the method to understand its performance.
 $$L_{h,\bar{A}}(X, Y) = E(h(X), Y) + \lambda_{1} F_{h,A_1}(X) + \dots + \lambda_{n} F_{h,A_n}(X)$$</p>
 </span>
 </div>
@@ -252,7 +250,7 @@ This is something very similar to what happen with <em>symbolic knowledge inject
 <span class="fragment col">
   <h4 class="accent" id="automl-for-fairness">AutoML for fairness</h4>
 <p>Because the training of ML models requires many hyperparameters – and with the addition of fairness constraints there is usually one more – we want to use AutoML tools to study the <strong>convergence of the best hyperparameters</strong> and how well they perform.
-In this way we can fairly compare different fairness techniques and understand which one is the best for a task.</p>
+In this way we can fairly compare different fairness techniques and understand which one is the best.</p>
 </span>
 </div>
 </section>
