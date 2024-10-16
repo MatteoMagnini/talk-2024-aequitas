@@ -175,11 +175,12 @@ However, also group fairness metrics can be computationally expensive.
 #### Which metric?
  
 - Demographic/statistical parity: how much model's predictions are **independent** of the protected attribute.
-  $$DP_{h, A}{X} = \sum_{a \in A} \left\| E[h(X) \mid A{=}a] - E[h(X)] \right\|$$
+  $$DP_{h, A}(X) = \sum_{a \in A} \left\| E[h(X) \mid A{=}a] - E[h(X)] \right\|$$
 - Disparate impact: how much the model **disproportionately** affects a group.
-  $$DI_{h, A}{X} = \min_{a \in A} \frac{E[h(X) = 1 \mid A{=}a]}{E[h(X) = 1]}$$
+  $$DI_{h, A}(X) = \min(\frac{E[h(X) \mid A{=}1]}{E[h(X) \mid A{=}0]},\frac{E[h(X) \mid A{=}0]}{E[h(X) \mid A{=}1]})$$
 - Equalized odds: how much the model **equally predicts** a given output for all the groups.
-  $$EO_{h, A}{X, Y} = \sum_{a \in A} \left\| E[h(X) = 1 \mid A{=}a, Y{=}1] - E[h(X) = 1 \mid A{=}a, Y{=}0] \right\|$$
+  $$EO_{h, A}(X) = \sum_{(a, y)}^{A \times Y} \eo{h, A}{X, a, y}$$
+  $$eo_{h, A}(X, a, y) = \left\| E[h(X) \mid A{=}a, Y{=}y] - E[h(X) \mid Y{=}y] \right\|$$
 
 {{% /fragment %}}
 {{% /row %}}
