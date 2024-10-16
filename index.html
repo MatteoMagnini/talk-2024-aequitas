@@ -158,11 +158,11 @@ However, also group fairness metrics can be computationally expensive.</p>
   <h4 id="which-metric">Which metric?</h4>
 <ul>
 <li>Demographic/statistical parity: how much model’s predictions are <strong>independent</strong> of the protected attribute.
-$$\DP{h, A}{X} = \sum_{a \in A} \left| \Evalue[h(X) \mid A{=}a] - \Evalue[h(X)] \right|$$</li>
+$$DP_{h, A}{X} = \sum_{a \in A} \left| E[h(X) \mid A{=}a] - E[h(X)] \right|$$</li>
 <li>Disparate impact: how much the model <strong>disproportionately</strong> affects a group.
-$$\DI{h, A}{X} = \min_{a \in A} \frac{\Evalue[h(X) = 1 \mid A{=}a]}{\Evalue[h(X) = 1]}$$</li>
+$$DI_{h, A}{X} = \min_{a \in A} \frac{E[h(X) = 1 \mid A{=}a]}{E[h(X) = 1]}$$</li>
 <li>Equalized odds: how much the model <strong>equally predicts</strong> a given output for all the groups.
-$$\EO{h, A}{X, Y} = \sum_{a \in A} \left| \Evalue[h(X) = 1 \mid A{=}a, Y{=}1] - \Evalue[h(X) = 1 \mid A{=}a, Y{=}0] \right|$$</li>
+$$EO_{h, A}{X, Y} = \sum_{a \in A} \left| E[h(X) = 1 \mid A{=}a, Y{=}1] - E[h(X) = 1 \mid A{=}a, Y{=}0] \right|$$</li>
 </ul>
 </span>
 </div>
