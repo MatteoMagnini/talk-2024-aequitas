@@ -162,13 +162,18 @@ An example is the income.</p>
 <div class="container">
 <span class="fragment col">
   <h4 id="group-vs-individual-fairness">Group vs. Individual fairness</h4>
-<p>Group fairness is about <strong>treating groups equally</strong>, while individual fairness is about <strong>treating similar individuals equally</strong>.
-Individual fairness metrics are more <em>computationally expensive</em> and because of that less common in practice.</p>
-<p>However, also group fairness metrics can be computationally expensive.</p>
+<p>Group fairness is about <strong>treating groups equally</strong>, while individual fairness is about <strong>treating similar individuals equally</strong>.</p>
+<p>Individual fairness metrics are more <em>computationally expensive</em> and because of that less common in practice.</p>
+<p>However, also group fairness metrics can be computationally expensive.
+For this reason, we decided to focus on group fairness metrics.</p>
 </span>
+</div>
+
+
 <span class="fragment col">
+  <span class="fragment col">
   <ul>
-<li><em>Demographic/statistical parity</em> how much model’s predictions are <strong>independent</strong> of the protected attribute.
+<li><em>Demographic/statistical parity</em> how much predictions are <strong>independent</strong> of the protected attribute.
 <small>$$DP_{h, A}(X) = \sum_{a \in A} \left|\left| E[h(X) \mid A{=}a] - E[h(X)] \right|\right|$$</small></li>
 <li><em>Disparate impact</em> how much the model <strong>disproportionately</strong> affects a group.
 <small>$$DI_{h, A}(X) = \min\left(\frac{E[h(X) \mid A{=}1]}{E[h(X) \mid A{=}0]},\frac{E[h(X) \mid A{=}0]}{E[h(X) \mid A{=}1]}\right)$$</small></li>
@@ -177,7 +182,9 @@ Individual fairness metrics are more <em>computationally expensive</em> and beca
 <small>$$eo_{h, A}(X, a, y) = \left|\left| E[h(X) \mid A{=}a, Y{=}y] - E[h(X) \mid Y{=}y] \right|\right|$$</small></li>
 </ul>
 </span>
-</div>
+
+</span>
+
 </section>
 <section data-noprocess="" data-shortcode-slide="" data-auto-animate="true" data-background-iframe="https://MatteoMagnini.github.io/talk-2024-aequitas/logo-right.html" data-preload="true" data-transition="zoom">
 <h2 class="highlight" id="fauci">FaUCI</h2>
@@ -186,7 +193,8 @@ Individual fairness metrics are more <em>computationally expensive</em> and beca
 <ul>
 <li>we considered <strong>demographic parity</strong>, <strong>disparate impact</strong>, and <strong>equalized odds</strong> (any other metric can be used)</li>
 <li>we generalized the metric to work with <strong>binary</strong>, <strong>categorical</strong>, and <strong>continuous</strong> protected attributes</li>
-<li>we also considered ad-hoc weights for the groups to cover <em>corner cases</em> (e.g., strong imbalance)</li>
+<li>we also considered ad-hoc weights for the groups to cover <em>corner cases</em> (e.g., strong imbalance)
+$$\L_{h,A}(X, Y) = E(h(X), Y) + \lambda F_{h,A}(X, Y)$$</li>
 </ul>
 </section>
 <section data-noprocess="" data-shortcode-slide="" data-auto-animate="true" data-background-iframe="https://MatteoMagnini.github.io/talk-2024-aequitas/logo-right.html" data-preload="true" data-transition="zoom">
@@ -234,20 +242,23 @@ Individual fairness metrics are more <em>computationally expensive</em> and beca
 <span class="fragment col">
   <h4 class="accent" id="intersectionality">Intersectionality</h4>
 <p>FaUCI can already be used to <strong>consider multiple protected attributes</strong> (subgroups) at the same time.
-However, we still need to perform a wide empirical study of the method to understand its performance in these cases.</p>
+However, we still need to perform a wide empirical study of the method to understand its performance in these cases.
+$$L_{h,\bar{A}}(X, Y) = E(h(X), Y) + \lambda_{1} F_{h,A_1}(X) + \dots + \lambda_{n} F_{h,A_n}(X)$$</p>
 </span>
 <span class="fragment col">
   <h4 class="accent" id="language-for-fairness">Language for fairness</h4>
 <p>We want to develop a <strong>language</strong> to help users to define <strong>ad-hoc fairness constraints</strong> in a more intuitive way.
-Many potential users do not have a strong background in ML and statistics, so we aim to <strong>make fairness techniques more accessible</strong>.</p>
+Many potential users do not have a strong background in ML and statistics, so we aim to <strong>make fairness techniques more accessible</strong>.
+This is something very similar to what happen with <em>symbolic knowledge injection</em> methods.</p>
 </span>
 <span class="fragment col">
   <h4 class="accent" id="automl-for-fairness">AutoML for fairness</h4>
-<p>Because the training of ML models requires many hyperparameters – and with the addition of fairness constraints there is usually one more – we want to use AutoML tools to study the <strong>convergence of the best hyperparameters</strong> and how well they perform.</p>
+<p>Because the training of ML models requires many hyperparameters – and with the addition of fairness constraints there is usually one more – we want to use AutoML tools to study the <strong>convergence of the best hyperparameters</strong> and how well they perform.
+In this way we can fairly compare different fairness techniques and understand which one is the best for a task.</p>
 </span>
 </div>
 </section>
-<section data-noprocess="" data-shortcode-slide="" data-auto-animate="true" data-background-iframe="https://MatteoMagnini.github.io/talk-2024-aequitas/logo-right.html" data-preload="true" data-transition="zoom">
+<section data-noprocess="" data-shortcode-slide="" data-auto-animate="true" data-background-iframe="https://MatteoMagnini.github.io/talk-2024-aequitas/logo-big.html" data-preload="true" data-transition="zoom">
 <h2 class="highlight" id="thank-you-for-your-attention">Thank you for your attention!</h2>
 </section>
 
