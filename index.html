@@ -167,16 +167,63 @@ However, also group fairness metrics can be computationally expensive.</p>
 <section data-noprocess="" data-shortcode-slide="" data-auto-animate="true" data-background-iframe="https://MatteoMagnini.github.io/talk-2024-aequitas/logo-right.html" data-preload="true" data-transition="zoom">
 <h2 class="highlight" id="fauci">FaUCI</h2>
 <h3 class="accent" id="fairness-under-constraints-injection">Fairness under Constraints Injection</h3>
-<p>We design FaUCI in order to be <em>agnostic</em> to both the fairness metric used and to the protected attribute type:</p>
+<p>We design FaUCI in order to be <em>agnostic</em> to the fairness metric used and to the protected attribute type:</p>
 <ul>
-<li>we considered <strong>demographic parity</strong>, <strong>disparate impact</strong>, and <strong>equalized odds</strong> (but any other metric can be used)</li>
+<li>we considered <strong>demographic parity</strong>, <strong>disparate impact</strong>, and <strong>equalized odds</strong> (any other metric can be used)</li>
 <li>we generalized the metric to work with <strong>binary</strong>, <strong>categorical</strong>, and <strong>continuous</strong> protected attributes</li>
 <li>we also considered ad-hoc weights for the groups to cover <em>corner cases</em> (e.g., strong imbalance)</li>
 </ul>
 </section>
 <section data-noprocess="" data-shortcode-slide="" data-auto-animate="true" data-background-iframe="https://MatteoMagnini.github.io/talk-2024-aequitas/logo-right.html" data-preload="true" data-transition="zoom">
 <h2 class="highlight" id="fauci-1">FaUCI</h2>
-<h3 class="accent" id="results">Results</h3>
+<h3 class="accent" id="results-on-the-adult-dataset">Results on the Adult dataset</h3>
+<div class="container">
+<span class="fragment col">
+  <h4 id="gender">Gender</h4>
+<figure class="">
+    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/demographic_parity_sex.pdf" style="height:270px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
+    <figcaption>  </figcaption>
+  </figure>
+<figure class="">
+    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/disparate_impact_sex.pdf" style="height:270px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
+    <figcaption>  </figcaption>
+  </figure>
+<figure class="">
+    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/equalized_odds_sex.pdf" style="height:270px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
+    <figcaption>  </figcaption>
+  </figure>
+</span>
+<span class="fragment col">
+  <h4 id="ethnicity">Ethnicity</h4>
+<figure class="">
+    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/demographic_parity_ethnicity.pdf" style="height:270px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
+    <figcaption>  </figcaption>
+  </figure>
+<figure class="">
+    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/disparate_impact_ethnicity.pdf" style="height:270px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
+    <figcaption>  </figcaption>
+  </figure>
+<figure class="">
+    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/equalized_odds_ethnicity.pdf" style="height:270px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
+    <figcaption>  </figcaption>
+  </figure>
+</span>
+<span class="fragment col">
+  <h4 id="age">Age</h4>
+<figure class="">
+    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/demographic_parity_age.pdf" style="height:270px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
+    <figcaption>  </figcaption>
+  </figure>
+<figure class="">
+    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/disparate_impact_age.pdf" style="height:270px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
+    <figcaption>  </figcaption>
+  </figure>
+<figure class="">
+    <img src="https://MatteoMagnini.github.io/talk-2024-aequitas/equalized_odds_age.pdf" style="height:270px; ; max-width: 95vw;max-height: 80vh;object-fit: contain;">
+    <figcaption>  </figcaption>
+  </figure>
+</span>
+</div>
 </section>
 <section data-noprocess="" data-shortcode-slide="" data-auto-animate="true" data-background-iframe="https://MatteoMagnini.github.io/talk-2024-aequitas/logo-right.html" data-preload="true" data-transition="zoom">
 <h2 class="highlight" id="future-directions">Future directions</h2>
