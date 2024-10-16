@@ -185,10 +185,27 @@ For this reason, we decided to focus on group fairness metrics.</p>
 <h3 class="accent" id="fairness-under-constraints-injection">Fairness under Constraints Injection</h3>
 <p>We design FaUCI in order to be <em>agnostic</em> to the fairness metric used and to the protected attribute type:</p>
 <ul>
-<li>we considered <strong>demographic parity</strong>, <strong>disparate impact</strong>, and <strong>equalized odds</strong> (any other metric can be used)</li>
-<li>we generalized the metric to work with <strong>binary</strong>, <strong>categorical</strong>, and <strong>continuous</strong> protected attributes</li>
-<li>we also considered ad-hoc weights for the groups to cover <em>corner cases</em> (e.g., strong imbalance)
-$$L_{h,A}(X, Y) = E(h(X), Y) + \lambda F_{h,A}(X, Y)$$</li>
+<li>
+<p>we considered <strong>demographic parity</strong>, <strong>disparate impact</strong>, and <strong>equalized odds</strong> (any other metric can be used)</p>
+</li>
+<li>
+<p>we generalized the metric to work with <strong>binary</strong>, <strong>categorical</strong>, and <strong>continuous</strong> protected attributes</p>
+</li>
+<li>
+<p>we also considered ad-hoc weights for the groups to cover <em>corner cases</em> (e.g., strong imbalance)</p>
+</li>
+<li>
+<p>Loss function: $$L_{h,A}(X, Y) = E(h(X), Y) + \lambda F_{h,A}(X, Y)$$</p>
+</li>
+<li>
+<p>Demographic Parity: $$DP_{h, A}(X) = \sum_{a \in A} \left|\left| E[h(X) \mid A{=}a] - E[h(X)] \right|\right|$$</p>
+</li>
+<li>
+<p>Weighted DP: $$WDP_{h, A}(X) = \sum_{a \in A} \left|\left| E[h(X) \mid A{=}a] - E[h(X)] \right|\right| \cdot w_{a}$$</p>
+</li>
+<li>
+<p>Generalised DP: $$GDP_{h, A}(X) = \int_{l}^{u}(\left|\left|\E[h(X) \mid A{=}a] - \E[h(X)]\right|\right| \cdot w_{a}) \cdot da$$</p>
+</li>
 </ul>
 </section>
 <section data-noprocess="" data-shortcode-slide="" data-auto-animate="true" data-background-iframe="https://MatteoMagnini.github.io/talk-2024-aequitas/logo-right.html" data-preload="true" data-transition="zoom">
