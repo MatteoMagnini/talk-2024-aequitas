@@ -204,7 +204,6 @@ We design FaUCI in order to be *agnostic* to the fairness metric used and to the
 #### Gender
     
 {{< image height="30" src="/demographic_parity_sex.png" >}}
-{{< image height="30" src="/disparate_impact_sex.png" >}}
 {{< image height="30" src="/equalized_odds_sex.png" >}}
 
 {{% /fragment %}}
@@ -213,7 +212,6 @@ We design FaUCI in order to be *agnostic* to the fairness metric used and to the
 #### Ethnicity
 
 {{< image height="30" src="/demographic_parity_ethnicity.png" >}}
-{{< image height="30" src="/disparate_impact_ethnicity.png" >}}
 {{< image height="30" src="/equalized_odds_ethnicity.png" >}}
 
 {{% /fragment %}}
@@ -222,7 +220,6 @@ We design FaUCI in order to be *agnostic* to the fairness metric used and to the
 #### Age
 
 {{< image height="30" src="/demographic_parity_age.png" >}}
-{{< image height="30" src="/disparate_impact_age.png" >}}
 {{< image height="30" src="/equalized_odds_age.png" >}}
     
 {{% /fragment %}}
