@@ -19,9 +19,8 @@ aliases = [
 
 📧 [matteo.magnini@unibo.it](mailto:gianluca.aguzzi@unibo.it)
 
-<br></br>
 
-{{< image height="200" src="/aequitas-logo.svg" >}}
+{{< image height="100" src="/aequitas-logo.svg" >}}
 
 ---
 
