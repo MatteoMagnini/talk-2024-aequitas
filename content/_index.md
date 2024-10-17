@@ -37,7 +37,7 @@ Fairness has different meanings to us depending on our *personal background*.
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
-{{< image height="30" src="/businessman-money.svg" >}}
+{{< image height="30" src="/businessman-money.png" >}}
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
@@ -306,5 +306,5 @@ In this way we can fairly compare different fairness techniques and understand w
 
 {{% slide auto-animate=true preload=true background-iframe="logo-big.html" transition="zoom" %}}
 ## Thank you for your attention! {.highlight}
-<br></br>
+
 {{< image height="10" src="/aequitas-logo.svg" >}}
