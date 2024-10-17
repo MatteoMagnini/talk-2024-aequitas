@@ -169,7 +169,7 @@ For this reason, we decided to focus on group fairness metrics.</p>
 </span>
 <span class="fragment col">
   <ul>
-<li><em>Demographic/statistical parity</em> how much predictions are <strong>independent</strong> of the protected attribute.
+<li><em>Demographic/statistical parity</em> how much model’s predictions are <strong>independent</strong> of the protected attribute.
 <small>$$DP_{h, A}(X) = \sum_{a \in A} \left|\left| E[h(X) \mid A{=}a] - E[h(X)] \right|\right|$$</small></li>
 <li><em>Disparate impact</em> how much the model <strong>disproportionately</strong> affects a group.
 <small>$$DI_{h, A}(X) = \min\left(\frac{E[h(X) \mid A{=}1]}{E[h(X) \mid A{=}0]},\frac{E[h(X) \mid A{=}0]}{E[h(X) \mid A{=}1]}\right)$$</small></li>
@@ -193,10 +193,11 @@ For this reason, we decided to focus on group fairness metrics.</p>
 </ul>
 </span>
 </div>
+<p><br><br></p>
 <div class="container">
 <span class="fragment col">
   <h4 id="loss-function">Loss function</h4>
-<p><small>$$L_{h,A}(X, Y) = E(h(X), Y) + \lambda F_{h,A}(X, Y)$$</small></p>
+<p><small>$$L_{h,A}(X, Y) = E(h(X), Y) + \lambda F_{h,A}(X)$$</small></p>
 </span>
 <span class="fragment col">
   <h4 id="binary-and-categorical">Binary and categorical</h4>
