@@ -32,17 +32,17 @@ Fairness has different meanings to us depending on our *personal background*.
 {{% row %}}
 {{% fragment class="col" %}}
 
-{{< image height="20" src="/woman-judge-light-skin-tone-svgrepo-com.svg" >}} {{< image height="20" src="/balance-law-svgrepo-com_v2.svg" >}}
+{{< image height="30" src="/woman-judge-balance-law.svg" >}}
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
-{{< image height="20" src="/businessman-svgrepo-com.svg" >}} {{< image height="20" src="/money-cash-svgrepo-com.svg" >}}
+{{< image height="30" src="/businessman-money.svg" >}}
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
-{{< image height="20" src="/technologist-medium-skin-tone-svgrepo-com.svg" >}} {{< image height="20" src="/free-technology-icon.svg" >}}
+{{< image height="30" src="/technologist-technology.svg" >}}
 
 {{% /fragment %}}
 {{% /row %}}
@@ -306,3 +306,5 @@ In this way we can fairly compare different fairness techniques and understand w
 
 {{% slide auto-animate=true preload=true background-iframe="logo-big.html" transition="zoom" %}}
 ## Thank you for your attention! {.highlight}
+<br></br>
+{{< image height="10" src="/aequitas-logo.svg" >}}
