@@ -12,6 +12,8 @@ aliases = [
 
 {{% slide preload=true background-iframe="logo.html" transition="zoom" %}}
 
+{{% row %}}
+{{% fragment class="col" %}}
 # Enforcing Fairness via Constraint Injection with FaUCI
 **2nd Aequitas Workshop on Fairness and Bias in AI**
 
@@ -19,9 +21,10 @@ aliases = [
 
 📧 [matteo.magnini@unibo.it](mailto:gianluca.aguzzi@unibo.it)
 
-<br></br>
 
-{{< image height="200" src="/aequitas-logo.svg" >}}
+{{< image height="50" src="/aequitas-logo.svg" >}}
+{{% /fragment %}}
+{{% /row %}}
 
 ---
 
