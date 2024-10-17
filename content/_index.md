@@ -37,7 +37,7 @@ Fairness has different meanings to us depending on our *personal background*.
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
-{{< image height="30" src="/businessman-money.png" >}}
+{{< image height="30" src="/businessman-money.svg" >}}
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
@@ -209,16 +209,15 @@ We design FaUCI in order to be *agnostic* to the fairness metric used and to the
 {{% /fragment %}}
 {{% /row %}}
 
-<br></br>
 
 {{% row %}}
 {{% fragment class="col" %}}
-#### Loss function
+#### Loss function {.accent}
 <small>$$L_{h,A}(X, Y) = E(h(X), Y) + \lambda F_{h,A}(X)$$</small>
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
-#### Binary and categorical
+#### Binary and categorical {.accent}
 
 <small>$$WDP_{h, A}(X) = \sum_{a \in A} \left\|\left\| E[h(X) \mid A{=}a] - E[h(X)] \right\|\right\| \cdot w_{a}$$</small>
 <small>$$WDI_{h, A}(X) = \sum_{a \in A} \eta\left(\frac{E\left[h(X) \mid A{=}a\right]}{E\left[h(X) \mid A{\ne}a\right]}\right) \cdot w_{a}$$</small>
@@ -226,7 +225,7 @@ We design FaUCI in order to be *agnostic* to the fairness metric used and to the
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
-#### Continuous
+#### Continuous {.accent}
 <small>$$GDP_{h, A}(X) = \int_{l}^{u}(\left\|\left\|E[h(X) \mid A{=}a] - E[h(X)]\right\|\right\| \cdot w_{a}) \cdot da$$</small>
 <small>$$GDI_{h, A}(X) = \int_{l}^{u} \eta\left(\frac{E\left[h(X) \mid A{=}a\right]}{E\left[h(X) \mid A{\ne}a\right]}\right) \cdot w_{a} \cdot da$$</small>
 <small>$$GEO_{h, A}(X) = \int_{l}^{u} \sum_{(a, y)}^{A \times Y} (eo_{h, A}(X, a, 0) + eo_{h, A}(X, a, 1)) \cdot w_{a} \cdot da$$</small>
@@ -305,6 +304,9 @@ In this way we can fairly compare different fairness techniques and understand w
 ---
 
 {{% slide auto-animate=true preload=true background-iframe="logo-big.html" transition="zoom" %}}
+
+<br></br>
 ## Thank you for your attention! {.highlight}
+<br></br>
 
 {{< image height="10" src="/aequitas-logo.svg" >}}
