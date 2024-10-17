@@ -23,7 +23,7 @@ jobs:
         id: gh-pages-url
       - uses: browser-actions/setup-chrome@latest
       - name: Produce PDF
-        run: google-chrome-stable --headless --run-all-compositor-stages-before-draw --disable-gpu --virtual-time-budget=10000 --print-to-pdf=slides.pdf ${{steps.gh-pages-url.outputs.URL}}\?print-pdf\&pdfSeparateFragments\=false\#/  
+        run: google-chrome-stable --headless --run-all-compositor-stages-before-draw --disable-gpu --virtual-time-budget=10000 --print-to-pdf=slides.pdf ${{steps.gh-pages-url.outputs.URL}}\?print-pdf\&pdfSeparateFragments\=true\#/
       - name: Tag From date
         run: echo $(date +'%Y_%m_%d-%H_%M') | xargs -I{}  echo '::set-output name=TAG::{}'  
         id: tag-from-date

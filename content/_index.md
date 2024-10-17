@@ -181,7 +181,7 @@ For this reason, we decided to focus on group fairness metrics.
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
-- *Demographic/statistical parity* how much predictions are **independent** of the protected attribute.
+- *Demographic/statistical parity* how much model's predictions are **independent** of the protected attribute.
 <small>$$DP_{h, A}(X) = \sum_{a \in A} \left\|\left\| E[h(X) \mid A{=}a] - E[h(X)] \right\|\right\|$$</small>
 - *Disparate impact* how much the model **disproportionately** affects a group.
 <small>$$DI_{h, A}(X) = \min\left(\frac{E[h(X) \mid A{=}1]}{E[h(X) \mid A{=}0]},\frac{E[h(X) \mid A{=}0]}{E[h(X) \mid A{=}1]}\right)$$</small>
@@ -207,10 +207,12 @@ We design FaUCI in order to be *agnostic* to the fairness metric used and to the
 {{% /fragment %}}
 {{% /row %}}
 
+<br></br>
+
 {{% row %}}
 {{% fragment class="col" %}}
 #### Loss function
-<small>$$L_{h,A}(X, Y) = E(h(X), Y) + \lambda F_{h,A}(X, Y)$$</small>
+<small>$$L_{h,A}(X, Y) = E(h(X), Y) + \lambda F_{h,A}(X)$$</small>
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
