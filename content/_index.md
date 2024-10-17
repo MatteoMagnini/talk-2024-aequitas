@@ -37,7 +37,7 @@ Fairness has different meanings to us depending on our *personal background*.
 {{% /fragment %}}
 {{% fragment class="col" %}}
 
-{{< image height="30" src="/businessman-money.png" >}}
+{{< image height="30" src="/businessman-money.svg" >}}
 
 {{% /fragment %}}
 {{% fragment class="col" %}}
